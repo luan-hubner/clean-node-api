@@ -1,4 +1,4 @@
-import { Encrypter, AddAccountModel, AccountModel } from './db-add-account-protocols'
+import { Encrypter, AddAccountModel, AccountModel, AddAccountRepository } from './db-add-account-protocols'
 import { DbAddAccount } from './db-add-account'
 
 const makeEncrypter = (): Encrypter => {
@@ -13,6 +13,7 @@ const makeEncrypter = (): Encrypter => {
 interface SutTypes {
   sut: DbAddAccount
   encrypterStub: Encrypter
+  addAccountRepositoryStub: AddAccountRepository
 }
 
 const makeAddAccountRepository = (): AddAccountRepository => {
